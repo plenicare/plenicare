@@ -1,0 +1,44 @@
+.health-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.health-icon {
+  flex-shrink: 0;
+}
+
+.health-icon img {
+  width: 70px;
+  height: 70px;
+}
+
+.health-content {
+  flex: 1 1 300px;
+}
+
+.dropdown-list {
+  display: none;
+}
+
+.w-dropdown-toggle.active + .dropdown-list {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .health-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .health-content {
+    text-align: left;
+    width: 100%;
+  }
+}
