@@ -17,6 +17,37 @@
   transition: background-color 0.3s ease;
 }
 
+/* Professionals Grid Responsive Styles */
+@media (max-width: 991px) {
+  .professionals-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-column-gap: 20px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .professionals-grid {
+    grid-template-columns: 1fr !important;
+    grid-column-gap: 0 !important;
+    max-width: 400px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .professional-card {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Services Grid Responsive Styles */
+@media (max-width: 991px) {
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    grid-column-gap: 0 !important;
+    max-width: 600px !important;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 991px) {
   .header-section {
@@ -133,7 +164,7 @@
     grid-column-gap: 0 !important;
     grid-row-gap: 30px !important;
   }
-  
+
   .service-item h4 {
     font-size: 14px !important;
   }

@@ -233,9 +233,7 @@ body{
 
         <!-- Professional 3: Bruna Rando -->
         <div class="professional-card" style="background-color: white; border-radius: 20px; padding: 25px; text-align: center; box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); overflow: hidden;">
-          <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #7B4B94, #A569BD); margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(123, 75, 148, 0.3);">
-            <span style="color: white; font-size: 40px; font-weight: bold;">B</span>
-          </div>
+          <img src="images/profissionais/Dra-Bruna-Rando.png" loading="lazy" alt="Bruna Rando" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 15px; display: block; box-shadow: 0 4px 15px rgba(123, 75, 148, 0.3);">
           <h5 class="heading-4" style="margin: 0 0 8px 0; color: #7B4B94; font-size: 20px; font-weight: 700;">Bruna Rando</h5>
           <div class="crm" style="font-size: 12px; color: #666; margin-bottom: 15px;">Personal Trainer e Treinadora</div>
           <div class="rich-text-block-2 w-richtext" style="text-align: left;">
@@ -318,96 +316,70 @@ body{
       <div class="w-layout-grid grid-16" style="grid-template-columns: repeat(4, 1fr); grid-column-gap: 30px; grid-row-gap: 40px; max-width: 1200px; margin: 0 auto;">
 
         <!-- Service 1: Treinos Personalizados -->
-        <div class="service-item" style="text-align: center; cursor: pointer;" onclick="toggleServiceInfo('service1')">
-          <div class="service-icon" style="width: 80px; height: 80px; margin: 0 auto 20px; background-color: white; border: 3px solid #7B4B94; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+        <div class="service-item" style="text-align: center; position: relative;">
+          <div class="service-icon" style="width: 85px; height: 85px; margin: 0 auto 20px; background-color: white; border: 3px solid #7B4B94; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; cursor: pointer;" onclick="showTooltip(this, 'Experiência exclusiva! A melhor maneira de obter resultados, com desenvolvimento continuo. Treinos elaborados e acompanhados por nossa treinadora, em um estúdio totalmente preparado para você fazer o seu melhor!')">
             <img src="images/icons/animated/exercise.png" alt="Treinos Personalizados" style="width: 40px; height: 40px; object-fit: contain;">
           </div>
           <h4 style="margin-bottom: 15px; color: #333; font-size: 16px;">Treinos Personalizados</h4>
-          <div id="service1" class="service-description" style="display: none; background: #f8f8f8; padding: 15px; border-radius: 10px; margin-top: 10px; font-size: 14px; color: #666;">
-            Experiência exclusiva! A melhor maneira de obter resultados, com desenvolvimento continuo. Treinos elaborados e acompanhados por nossa treinadora, em um estúdio totalmente preparado para você fazer o seu melhor!
-          </div>
         </div>
 
         <!-- Service 2: Planilhas de Treino -->
-        <div class="service-item" style="text-align: center; cursor: pointer;" onclick="toggleServiceInfo('service2')">
-          <div class="service-icon" style="width: 80px; height: 80px; margin: 0 auto 20px; background-color: white; border: 3px solid #7B4B94; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+        <div class="service-item" style="text-align: center; position: relative;">
+          <div class="service-icon" style="width: 85px; height: 85px; margin: 0 auto 20px; background-color: white; border: 3px solid #7B4B94; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; cursor: pointer;" onclick="showTooltip(this, 'Você define sua meta, nós ajudamos você a chegar lá! Os melhores exercícios e modelos de treino, com acompanhamento à distância de nossa treinadora.')">
             <img src="images/icons/animated/exercise-activity.png" alt="Planilhas de Treino" style="width: 40px; height: 40px; object-fit: contain;">
           </div>
           <h4 style="margin-bottom: 15px; color: #333; font-size: 16px;">Planilhas de Treino</h4>
-          <div id="service2" class="service-description" style="display: none; background: #f8f8f8; padding: 15px; border-radius: 10px; margin-top: 10px; font-size: 14px; color: #666;">
-            Você define sua meta, nós ajudamos você a chegar lá! Os melhores exercícios e modelos de treino, com acompanhamento à distância de nossa treinadora.
-          </div>
         </div>
 
         <!-- Service 3: Planilhas de Corrida -->
-        <div class="service-item" style="text-align: center; cursor: pointer;" onclick="toggleServiceInfo('service3')">
-          <div class="service-icon" style="width: 80px; height: 80px; margin: 0 auto 20px; background-color: white; border: 3px solid #7B4B94; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+        <div class="service-item" style="text-align: center; position: relative;">
+          <div class="service-icon" style="width: 85px; height: 85px; margin: 0 auto 20px; background-color: white; border: 3px solid #7B4B94; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; cursor: pointer;" onclick="showTooltip(this, 'Se a corrida é sua paixão, invista em melhores resultados e em evolução.')">
             <img src="images/icons/animated/treadmill.png" alt="Planilhas de Corrida" style="width: 40px; height: 40px; object-fit: contain;">
           </div>
           <h4 style="margin-bottom: 15px; color: #333; font-size: 16px;">Planilhas de Corrida</h4>
-          <div id="service3" class="service-description" style="display: none; background: #f8f8f8; padding: 15px; border-radius: 10px; margin-top: 10px; font-size: 14px; color: #666;">
-            Se a corrida é sua paixão, invista em melhores resultados e em evolução.
-          </div>
         </div>
 
         <!-- Service 4: Treinamento Funcional -->
-        <div class="service-item" style="text-align: center; cursor: pointer;" onclick="toggleServiceInfo('service4')">
-          <div class="service-icon" style="width: 80px; height: 80px; margin: 0 auto 20px; background-color: white; border: 3px solid #7B4B94; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+        <div class="service-item" style="text-align: center; position: relative;">
+          <div class="service-icon" style="width: 85px; height: 85px; margin: 0 auto 20px; background-color: white; border: 3px solid #7B4B94; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; cursor: pointer;" onclick="showTooltip(this, 'Treine o corpo todo, numa aula dinâmica e com alto gasto calórico.')">
             <img src="images/icons/animated/helping-icon.gif" alt="Treinamento Funcional" style="width: 40px; height: 40px; object-fit: contain;">
           </div>
           <h4 style="margin-bottom: 15px; color: #333; font-size: 16px;">Treinamento Funcional</h4>
-          <div id="service4" class="service-description" style="display: none; background: #f8f8f8; padding: 15px; border-radius: 10px; margin-top: 10px; font-size: 14px; color: #666;">
-            Treine o corpo todo, numa aula dinâmica e com alto gasto calórico.
-          </div>
         </div>
 
         <!-- Service 5: Bota de Compressão Pneumática -->
-        <div class="service-item" style="text-align: center; cursor: pointer;" onclick="toggleServiceInfo('service5')">
-          <div class="service-icon" style="width: 80px; height: 80px; margin: 0 auto 20px; background-color: white; border: 3px solid #7B4B94; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+        <div class="service-item" style="text-align: center; position: relative;">
+          <div class="service-icon" style="width: 85px; height: 85px; margin: 0 auto 20px; background-color: white; border: 3px solid #7B4B94; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; cursor: pointer;" onclick="showTooltip(this, 'Você já é atleta e gosta de treinos longos e intensos? Experimente uma sessão com a bota de compressão para uma melhor recuperação.')">
             <img src="images/icons/animated/physioteraphy-icon.gif" alt="Bota de Compressão Pneumática" style="width: 40px; height: 40px; object-fit: contain;">
           </div>
           <h4 style="margin-bottom: 15px; color: #333; font-size: 16px;">Bota de Compressão Pneumática</h4>
-          <div id="service5" class="service-description" style="display: none; background: #f8f8f8; padding: 15px; border-radius: 10px; margin-top: 10px; font-size: 14px; color: #666;">
-            Você já é atleta e gosta de treinos longos e intensos? Experimente uma sessão com a bota de compressão para uma melhor recuperação.
-          </div>
         </div>
 
         <!-- Service 6: Agulhamento Seco -->
-        <div class="service-item" style="text-align: center; cursor: pointer;" onclick="toggleServiceInfo('service6')">
-          <div class="service-icon" style="width: 80px; height: 80px; margin: 0 auto 20px; background-color: white; border: 3px solid #7B4B94; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+        <div class="service-item" style="text-align: center; position: relative;">
+          <div class="service-icon" style="width: 85px; height: 85px; margin: 0 auto 20px; background-color: white; border: 3px solid #7B4B94; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; cursor: pointer;" onclick="showTooltip(this, 'Excelentes resultados para dores musculares e crônicas em geral. Uma forma de tratamento que evita medicações.')">
             <img src="images/acupuncture.png" alt="Agulhamento Seco" style="width: 40px; height: 40px; object-fit: contain;">
           </div>
           <h4 style="margin-bottom: 15px; color: #333; font-size: 16px;">Agulhamento Seco</h4>
-          <div id="service6" class="service-description" style="display: none; background: #f8f8f8; padding: 15px; border-radius: 10px; margin-top: 10px; font-size: 14px; color: #666;">
-            Excelentes resultados para dores musculares e crônicas em geral. Uma forma de tratamento que evita medicações.
-          </div>
         </div>
 
         <!-- Service 7: Liberação Miofascial -->
-        <div class="service-item" style="text-align: center; cursor: pointer;" onclick="toggleServiceInfo('service7')">
-          <div class="service-icon" style="width: 80px; height: 80px; margin: 0 auto 20px; background-color: white; border: 3px solid #7B4B94; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+        <div class="service-item" style="text-align: center; position: relative;">
+          <div class="service-icon" style="width: 85px; height: 85px; margin: 0 auto 20px; background-color: white; border: 3px solid #7B4B94; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; cursor: pointer;" onclick="showTooltip(this, 'Ideal para alongar os músculos, aliviando tensões e restrições.')">
             <img src="images/massage.png" alt="Liberação Miofascial" style="width: 40px; height: 40px; object-fit: contain;">
           </div>
           <h4 style="margin-bottom: 15px; color: #333; font-size: 16px;">Liberação Miofascial</h4>
-          <div id="service7" class="service-description" style="display: none; background: #f8f8f8; padding: 15px; border-radius: 10px; margin-top: 10px; font-size: 14px; color: #666;">
-            Ideal para alongar os músculos, aliviando tensões e restrições.
-          </div>
         </div>
 
         <!-- Service 8: Terapia Manual -->
-        <div class="service-item" style="text-align: center; cursor: pointer;" onclick="toggleServiceInfo('service8')">
-          <div class="service-icon" style="width: 80px; height: 80px; margin: 0 auto 20px; background-color: white; border: 3px solid #7B4B94; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+        <div class="service-item" style="text-align: center; position: relative;">
+          <div class="service-icon" style="width: 85px; height: 85px; margin: 0 auto 20px; background-color: white; border: 3px solid #7B4B94; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; cursor: pointer;" onclick="showTooltip(this, 'Indicado para tratamento das disfunções do movimento. Ajuda a reduzir a dor, promover a auto cura e melhorar os movimentos.')">
             <img src="images/physiotherapy.png" alt="Terapia Manual" style="width: 40px; height: 40px; object-fit: contain;">
           </div>
           <h4 style="margin-bottom: 15px; color: #333; font-size: 16px;">Terapia Manual</h4>
-          <div id="service8" class="service-description" style="display: none; background: #f8f8f8; padding: 15px; border-radius: 10px; margin-top: 10px; font-size: 14px; color: #666;">
-            Indicado para tratamento das disfunções do movimento. Ajuda a reduzir a dor, promover a auto cura e melhorar os movimentos.
-          </div>
         </div>
 
       </div>
-
-      <!-- Remove the responsive styles that were specific to the card layout -->
     </div>
   </div>
 
@@ -440,48 +412,7 @@ body{
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6260a970eb14156f26c0ee23" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
-
-  <script>
-    function toggleServiceInfo(serviceId) {
-      const serviceDesc = document.getElementById(serviceId);
-      const allDescriptions = document.querySelectorAll('.service-description');
-
-      // Hide all other service descriptions
-      allDescriptions.forEach(desc => {
-        if (desc.id !== serviceId) {
-          desc.style.display = 'none';
-        }
-      });
-
-      // Toggle the clicked service description
-      if (serviceDesc.style.display === 'none' || serviceDesc.style.display === '') {
-        serviceDesc.style.display = 'block';
-      } else {
-        serviceDesc.style.display = 'none';
-      }
-    }
-
-    // Add hover effects to service icons
-    document.addEventListener('DOMContentLoaded', function() {
-      const serviceIcons = document.querySelectorAll('.service-icon');
-
-      serviceIcons.forEach(icon => {
-        icon.addEventListener('mouseenter', function() {
-          this.style.transform = 'scale(1.05)';
-          this.style.boxShadow = '0 0 20px rgba(123, 75, 148, 0.6), 0 0 40px rgba(123, 75, 148, 0.4)';
-          this.style.borderWidth = '4px';
-          this.style.borderColor = '#7B4B94';
-        });
-
-        icon.addEventListener('mouseleave', function() {
-          this.style.transform = 'scale(1)';
-          this.style.boxShadow = 'none';
-          this.style.borderWidth = '3px';
-          this.style.borderColor = '#7B4B94';
-        });
-      });
-    });
-  </script>
+  <script src="js/studio-tooltips.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>
