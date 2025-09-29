@@ -150,6 +150,26 @@
   border-color: #7B4B94 !important;
 }
 
+/* Studio Image Grid Responsive Styles */
+@media (max-width: 991px) {
+  .studio-image-grid {
+    grid-template-columns: 1fr 1fr !important;
+    grid-column-gap: 15px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .studio-image-grid {
+    grid-template-columns: 1fr !important;
+    grid-column-gap: 0 !important;
+    grid-row-gap: 15px !important;
+  }
+  
+  .studio-image-grid .w-inline-block {
+    height: 200px !important;
+  }
+}
+
 /* Service items responsive grid adjustments */
 @media (max-width: 991px) {
   .w-layout-grid[style*="grid-template-columns: repeat(4, 1fr)"] {
