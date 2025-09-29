@@ -26,6 +26,120 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Simple professional cards - always visible */
+.professional-card {
+  margin-bottom: 30px !important;
+  background: white !important;
+  padding: 20px !important;
+}
+
+/* Professional header */
+.professional-header {
+  margin-bottom: 15px !important;
+}
+
+.text-block-88 {
+  font-weight: 600 !important;
+  color: #2c3e50 !important;
+  margin-bottom: 5px !important;
+  font-size: 1.1em !important;
+}
+
+.text-block-96 {
+  color: #6c757d !important;
+  font-size: 0.9em !important;
+  margin-bottom: 0 !important;
+}
+
+/* Professional content */
+.professional-content {
+  background: white !important;
+}
+
+.w-row {
+  padding: 0 !important;
+  background: white !important;
+  margin: 0 !important;
+}
+
+/* Photo styling - clean without shadow */
+.card-image {
+  border-radius: 8px !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover !important;
+  max-width: 250px !important;
+  max-height: 250px !important;
+}
+
+/* Placeholder for missing images */
+.image-placeholder {
+  width: 250px !important;
+  height: 250px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto !important;
+  position: relative !important;
+}
+
+.image-placeholder::before {
+  content: "👤" !important;
+  font-size: 80px !important;
+  color: #6c757d !important;
+}
+
+/* CV text */
+.cv-text {
+  padding-left: 15px !important;
+}
+
+.cv-text ul {
+  margin: 0 !important;
+  padding-left: 20px !important;
+}
+
+.cv-text li {
+  margin-bottom: 8px !important;
+  line-height: 1.5 !important;
+  color: #495057 !important;
+}
+
+/* Divisor between professionals */
+.professional-card:not(:last-child) {
+  margin-bottom: 25px !important;
+  border-bottom: 1px solid #dee2e6 !important;
+  padding-bottom: 25px !important;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .w-row {
+    flex-direction: column !important;
+  }
+
+  .column-15, .column-19 {
+    width: 100% !important;
+    margin-bottom: 15px !important;
+  }
+
+  .cv-text {
+    padding-left: 0 !important;
+  }
+}
+
+/* Hide any remaining dropdown elements */
+.w-dropdown-list,
+.dropdown-list,
+.accordion-icon,
+.w-icon-dropdown-toggle,
+.w-dropdown-toggle,
+.accoridon-toggle {
+  display: none !important;
+}
 </style>
 </head>
 <body class="body-2">
@@ -72,17 +186,34 @@ body{
         <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edb5-3ba9edb4">
           <div class="health-title">Psiquiatria</div>
           <div class="paragraph">Especialidade dedicada à saúde mental.</div>
-          <div data-hover="false" data-delay="0" data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edba" class="accordion-item w-dropdown">
-            <div class="accoridon-toggle w-dropdown-toggle">
-              <div class="accordion-icon w-icon-dropdown-toggle"></div>
-              <div>
-                <div class="text-block-88">Dra. Vívian Beatriz Orlandin Coelho</div>
-              </div>
-              <div>
-                <div class="text-block-96">CRM: 107757 RQE: 31140<br></div>
+          <div class="professional-card">
+            <div class="professional-header">
+              <div class="text-block-88">Dr. Vitor Martins Gonçalves</div>
+              <div class="text-block-96">CRM: 199266 RQE: 99506</div>
+            </div>
+            <div class="professional-content">
+              <div class="w-row">
+                <div class="column-15 w-col w-col-3"><img src="images/Dr-Vitor-Martins-Goncalves.png" loading="lazy" alt="" class="image-2 card-image"></div>
+                <div class="column-19 w-col w-col-9">
+                  <div class="cv-text w-richtext">
+                    <ul role="list">
+                      <li>Graduado em Medicina pela Universidade de Araraquara em 2018</li>
+                      <li>Residência médica em Psiquiatria pelo SSCF - Campinas em 2022</li>
+                      <li>Atuação em saúde mental completa e integral</li>
+                      <li>Focos em tratamento atualizado de ansiedade, depressão, pânico, TDAH, TOC e dependências/compulsões</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-            <nav class="dropdown-list w-dropdown-list">
+          </div>
+
+          <div class="professional-card">
+            <div class="professional-header">
+              <div class="text-block-88">Dra. Vívian Beatriz Orlandin Coelho</div>
+              <div class="text-block-96">CRM: 107757 RQE: 31140</div>
+            </div>
+            <div class="professional-content">
               <div class="w-row">
                 <div class="column-15 w-col w-col-3"><img src="images/Dra-Vivian.png" loading="lazy" alt="" class="image-2 card-image"></div>
                 <div class="column-19 w-col w-col-9">
@@ -95,34 +226,7 @@ body{
                   </div>
                 </div>
               </div>
-            </nav>
-          </div>
-
-          <div data-hover="false" data-delay="0" data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edba" class="accordion-item w-dropdown">
-            <div class="accoridon-toggle w-dropdown-toggle">
-              <div class="accordion-icon w-icon-dropdown-toggle"></div>
-              <div>
-                <div class="text-block-88">Dr. Vitor Martins Gonçalves</div>
-              </div>
-              <div>
-                <div class="text-block-96">CRM: 199266 RQE: 99506<br></div>
-              </div>
             </div>
-            <nav class="dropdown-list w-dropdown-list">
-              <div class="w-row">
-                <div class="column-15 w-col w-col-3"><img src="images/ Dr-Vitor-Martins-Goncalves.png" loading="lazy" alt="" class="image-2 card-image"></div>
-                <div class="column-19 w-col w-col-9">
-                  <div class="cv-text w-richtext">
-                    <ul role="list">
-                      <li>Graduado em Medicina pela Universidade de Araraquara em 2018</li>
-                      <li>Residência médica em Psiquiatria pelo SSCF - Campinas em 2022</li>
-                      <li>Atuação em saúde mental completa e integral</li>
-                      <li>Focos em tratamento atualizado de ansiedade, depressão, pânico, TDAH, TOC e dependências/compulsões</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </nav>
           </div>
 
         </div>
@@ -133,17 +237,12 @@ body{
         <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edb5-3ba9edb4">
           <div class="health-title">Otorrinolaringologia</div>
           <div class="paragraph">Ramo da medicina que atua na região da cabeça e do pescoço, em especial nas áreas do nariz, seios da face, garganta e ouvidos.</div>
-          <div data-hover="false" data-delay="0" data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edba" class="accordion-item w-dropdown">
-            <div class="accoridon-toggle w-dropdown-toggle">
-              <div class="accordion-icon w-icon-dropdown-toggle"></div>
-              <div>
-                <div class="text-block-88">Dr Diego Oliveira Santos</div>
-              </div>
-              <div>
-                <div class="text-block-96">CRM: 174624 RQE: 92025<br></div>
-              </div>
+          <div class="professional-card">
+            <div class="professional-header">
+              <div class="text-block-88">Dr Diego Oliveira Santos</div>
+              <div class="text-block-96">CRM: 174624 RQE: 92025</div>
             </div>
-            <nav class="dropdown-list w-dropdown-list">
+            <div class="professional-content">
               <div class="w-row">
                 <div class="column-15 w-col w-col-3"><img src="images/Dr-Diego-Oliveira.png" loading="lazy" alt="" class="image-2 card-image"></div>
                 <div class="column-19 w-col w-col-9">
@@ -156,7 +255,7 @@ body{
                   </div>
                 </div>
               </div>
-            </nav>
+            </div>
           </div>
         </div>
       </div>
@@ -166,17 +265,12 @@ body{
         <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edb5-3ba9edb4">
           <div class="health-title">Cardiologia</div>
           <div class="paragraph">A cardiologia é a especialidade médica que estuda o coração e os vasos sanguíneos, bem como as doenças que afetam esses órgãos.</div>
-          <div data-hover="false" data-delay="0" data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edba" class="accordion-item w-dropdown">
-            <div class="accoridon-toggle w-dropdown-toggle">
-              <div class="accordion-icon w-icon-dropdown-toggle"></div>
-              <div>
-                <div class="text-block-88">Dra. Anaci Wood Noronha</div>
-              </div>
-              <div>
-                <div class="text-block-96">CRM MG: 55426<br></div>
-              </div>
+          <div class="professional-card">
+            <div class="professional-header">
+              <div class="text-block-88">Dra. Anaci Wood Noronha</div>
+              <div class="text-block-96">CRM MG: 55426</div>
             </div>
-            <nav class="dropdown-list w-dropdown-list">
+            <div class="professional-content">
               <div class="w-row">
                 <div class="column-15 w-col w-col-3"><img src="images/Dra-Anaci-Wood-Noronha.png" loading="lazy" alt="" class="image-2 card-image"></div>
                 <div class="column-19 w-col w-col-9">
@@ -193,7 +287,7 @@ body{
                   </div>
                 </div>
               </div>
-            </nav>
+            </div>
           </div>
         </div>
       </div>
@@ -207,17 +301,12 @@ body{
           <div class="paragraph">
             Subespecialidade da pediatria que se dedica ao estudo, diagnóstico e tratamento de doenças e distúrbios do sistema nervoso de crianças e adolescentes.
           </div>
-          <div data-hover="false" data-delay="0" data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edba" class="accordion-item w-dropdown">
-            <div class="accoridon-toggle w-dropdown-toggle">
-              <div class="accordion-icon w-icon-dropdown-toggle"></div>
-              <div>
-                <div class="text-block-88">Dra. Cristiane Duarte Santos</div>
-              </div>
-              <div>
-                <div class="text-block-96">CRM 42.758</div>
-              </div>
+          <div class="professional-card">
+            <div class="professional-header">
+              <div class="text-block-88">Dra. Cristiane Duarte Santos</div>
+              <div class="text-block-96">CRM 42.758</div>
             </div>
-            <nav class="dropdown-list w-dropdown-list">
+            <div class="professional-content">
               <div class="w-row">
                 <div class="column-15 w-col w-col-3">
                   <img src="images/Dra-Cristiane-Duarte-Santos.png" loading="lazy" alt="" class="image-2 card-image">
@@ -233,7 +322,37 @@ body{
                   </div>
                 </div>
               </div>
-            </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edb4" class="w-layout-grid grid-8 shadow">
+        <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edcc-3ba9edb4" class="div-block-7"><img src="images/osteopathy.png" width="70" height="70" loading="lazy" alt="" class="image-3"></div>
+        <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edb5-3ba9edb4">
+          <div class="health-title">Osteopatia</div>
+          <div class="paragraph">A Osteopatia é uma abordagem de tratamento focada na relação entre a estrutura corporal e seu funcionamento, priorizando a integridade do sistema musculoesquelético.</div>
+          <div class="professional-card">
+            <div class="professional-header">
+              <div class="text-block-88">Dr. André Quast</div>
+              <div class="text-block-96">Crefito: 14173-F</div>
+            </div>
+            <div class="professional-content">
+              <div class="w-row">
+                <div class="column-15 w-col w-col-3"><img src="images/Dr-Andre-Quast.png" loading="lazy" alt="" class="image-2 card-image"></div>
+                <div class="column-19 w-col w-col-9">
+                  <div class="cv-text w-richtext">
+                    <ul role="list">
+                      <li>Fiseoterapeuta formado plea UNIFAFIBE</li>
+                      <li>especialização em Ortopedia e Traumatologia - UNICAMP</li>
+                      <li>Formação Completa em Osteopatia - CBO</li>
+                      <li>Título de Especialista em Osteopatia - COFITTO/AOB</li>
+                      <li>Docente dos cursos de Pós graduação em Osteopatia e Fisioterapia Traumato-ortopédica - UNIMETROCAMP</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -247,17 +366,12 @@ body{
           <div class="paragraph">
             Atendimento nas áreas de Cirurgia Geral, Proctologia e Gastroenterologia, incluindo avaliações cirúrgicas, pré e pós-operatórias.
           </div>
-          <div data-hover="false" data-delay="0" data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edba" class="accordion-item w-dropdown">
-            <div class="accoridon-toggle w-dropdown-toggle">
-              <div class="accordion-icon w-icon-dropdown-toggle"></div>
-              <div>
-                <div class="text-block-88">Dr. Fabiano Rodilei Vendrasco</div>
-              </div>
-              <div>
-                <div class="text-block-96"></div>
-              </div>
+          <div class="professional-card">
+            <div class="professional-header">
+              <div class="text-block-88">Dr. Fabiano Rodilei Vendrasco</div>
+              <div class="text-block-96"></div>
             </div>
-            <nav class="dropdown-list w-dropdown-list">
+            <div class="professional-content">
               <div class="w-row">
                 <div class="column-15 w-col w-col-3">
                   <img src="images/profissionais/Dr-Fabiano.png" loading="lazy" alt="Foto do Dr. Fabiano Rodilei Vendrasco" class="image-2 card-image">
@@ -275,7 +389,7 @@ body{
                   </div>
                 </div>
               </div>
-            </nav>
+            </div>
           </div>
         </div>
       </div>
@@ -293,6 +407,7 @@ body{
       </div>
     </div>
   </div>
+
   <div class="footer">
     <div class="container w-container">
       <div class="div-block-47">
