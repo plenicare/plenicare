@@ -88,20 +88,50 @@ body{
     <div class="container w-container">
       <h2 class="section-title" style="display: block; text-align: center; margin: 0 auto 40px auto; width: 100%; color: #7B4B94;">Nosso Espaço</h2>
       <div>
-        <div class="w-layout-grid grid-13" style="grid-template-columns: 1fr 1fr 1fr; grid-column-gap: 20px; grid-row-gap: 20px; justify-items: center;">
+        <style>
+          .studio-image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+            justify-items: center;
+            align-items: center;
+          }
+          .studio-image-grid .w-inline-block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 8px;
+          }
+          .studio-image-grid img.rounded {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+          }
+          .studio-image-grid img.rounded:hover {
+            transform: scale(1.05);
+          }
+        </style>
+        <div class="w-layout-grid grid-13 studio-image-grid">
 
           <!-- Row 1: Photos Espaço -->
           <a href="#" class="w-inline-block w-lightbox">
-            <img src="images/thumb_pxIMG_3816.png" loading="lazy" alt="Espaço Studio" class="rounded">
+            <img src="images/studio/studio-1.jpeg" loading="lazy" alt="Espaço Studio" class="rounded">
             <script type="application/json" class="w-json">{
   "items": [
     {
       "_id": "example_img",
-      "origFileName": "pxIMG_3816.jpg",
-      "fileName": "pxIMG_3816.jpg",
+      "origFileName": "studio-1.jpeg",
+      "fileName": "studio-1.jpeg",
       "fileSize": 453201,
       "height": 800,
-      "url": "images/pxIMG_3816.jpg",
+      "url": "images/studio/studio-1.jpeg",
       "width": 1200,
       "type": "image"
     }
@@ -111,16 +141,16 @@ body{
           </a>
 
           <a href="#" class="w-inline-block w-lightbox">
-            <img src="images/thumb_pxIMG_0518.png" loading="lazy" alt="Espaço Studio" class="rounded">
+            <img src="images/studio/studio-2.jpeg" loading="lazy" alt="Espaço Studio" class="rounded">
             <script type="application/json" class="w-json">{
   "items": [
     {
       "_id": "example_img",
-      "origFileName": "pxIMG_0518.jpg",
-      "fileName": "pxIMG_0518.jpg",
+      "origFileName": "studio-2.jpeg",
+      "fileName": "studio-2.jpeg",
       "fileSize": 319182,
       "height": 800,
-      "url": "images/pxIMG_0518.jpg",
+      "url": "images/studio/studio-2.jpeg",
       "width": 1200,
       "type": "image"
     }
@@ -130,55 +160,16 @@ body{
           </a>
 
           <a href="#" class="w-inline-block w-lightbox">
-            <img src="images/thumb_pxIMG_3813.png" loading="lazy" alt="Espaço Studio" class="rounded">
+            <img src="images/studio/studio-3.jpeg" loading="lazy" alt="Espaço Studio" class="rounded">
             <script type="application/json" class="w-json">{
   "items": [
     {
       "_id": "example_img",
-      "origFileName": "pxIMG_3813.jpg",
-      "fileName": "pxIMG_3813.jpg",
+      "origFileName": "studio-3.jpeg",
+      "fileName": "studio-3.jpeg",
       "fileSize": 364346,
       "height": 800,
-      "url": "images/pxIMG_3813.jpg",
-      "width": 1200,
-      "type": "image"
-    }
-  ],
-  "group": "lightbox-studio"
-}</script>
-          </a>
-
-          <!-- Row 2: Other Photos -->
-          <a href="#" class="w-inline-block w-lightbox">
-            <img src="images/thumb_pxIMG_0509.png" loading="lazy" alt="Foto Atividade" class="rounded">
-            <script type="application/json" class="w-json">{
-  "items": [
-    {
-      "_id": "example_img",
-      "origFileName": "pxIMG_0509.jpg",
-      "fileName": "pxIMG_0509.jpg",
-      "fileSize": 315865,
-      "height": 800,
-      "url": "images/pxIMG_0509.jpg",
-      "width": 1200,
-      "type": "image"
-    }
-  ],
-  "group": "lightbox-studio"
-}</script>
-          </a>
-
-          <a href="#" class="w-inline-block w-lightbox">
-            <img src="images/thumb_pxIMG_0675.png" loading="lazy" alt="Foto Bala" class="rounded">
-            <script type="application/json" class="w-json">{
-  "items": [
-    {
-      "_id": "example_img",
-      "origFileName": "pxIMG_0675.jpg",
-      "fileName": "pxIMG_0675.jpg",
-      "fileSize": 523654,
-      "height": 800,
-      "url": "images/pxIMG_0675.jpg",
+      "url": "images/studio/studio-3.jpeg",
       "width": 1200,
       "type": "image"
     }
