@@ -26,6 +26,120 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Simple professional cards - always visible */
+.professional-card {
+  margin-bottom: 30px !important;
+  background: white !important;
+  padding: 20px !important;
+}
+
+/* Professional header */
+.professional-header {
+  margin-bottom: 15px !important;
+}
+
+.text-block-88 {
+  font-weight: 600 !important;
+  color: #2c3e50 !important;
+  margin-bottom: 5px !important;
+  font-size: 1.1em !important;
+}
+
+.text-block-96 {
+  color: #6c757d !important;
+  font-size: 0.9em !important;
+  margin-bottom: 0 !important;
+}
+
+/* Professional content */
+.professional-content {
+  background: white !important;
+}
+
+.w-row {
+  padding: 0 !important;
+  background: white !important;
+  margin: 0 !important;
+}
+
+/* Photo styling - clean without shadow */
+.card-image {
+  border-radius: 8px !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover !important;
+  max-width: 250px !important;
+  max-height: 250px !important;
+}
+
+/* Placeholder for missing images */
+.image-placeholder {
+  width: 250px !important;
+  height: 250px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto !important;
+  position: relative !important;
+}
+
+.image-placeholder::before {
+  content: "👤" !important;
+  font-size: 80px !important;
+  color: #6c757d !important;
+}
+
+/* CV text */
+.cv-text {
+  padding-left: 15px !important;
+}
+
+.cv-text ul {
+  margin: 0 !important;
+  padding-left: 20px !important;
+}
+
+.cv-text li {
+  margin-bottom: 8px !important;
+  line-height: 1.5 !important;
+  color: #495057 !important;
+}
+
+/* Divisor between professionals */
+.professional-card:not(:last-child) {
+  margin-bottom: 25px !important;
+  border-bottom: 1px solid #dee2e6 !important;
+  padding-bottom: 25px !important;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .w-row {
+    flex-direction: column !important;
+  }
+
+  .column-15, .column-19 {
+    width: 100% !important;
+    margin-bottom: 15px !important;
+  }
+
+  .cv-text {
+    padding-left: 0 !important;
+  }
+}
+
+/* Hide any remaining dropdown elements */
+.w-dropdown-list,
+.dropdown-list,
+.accordion-icon,
+.w-icon-dropdown-toggle,
+.w-dropdown-toggle,
+.accoridon-toggle {
+  display: none !important;
+}
 </style>
 </head>
 <body class="body-2">
@@ -44,8 +158,9 @@ body{
           <a href="index.html" class="nav-link w-nav-link">Home</a>
           <a href="sobre-nos.html" class="nav-link w-nav-link">Sobre Nós</a>
           <a href="geriatria.html" class="nav-link w-nav-link">Geriatria</a>
-          <a href="saude.html" aria-current="page" class="nav-link w-nav-link w--current">Saúde</a>
+          <a href="saude.html" aria-current="page" class="nav-link w-nav-link">Saúde</a>
           <a href="bem-estar.html" class="nav-link w-nav-link">Bem-Estar</a>
+          <a href="studio.html" aria-current="page" class="nav-link w-nav-link">Studio PleniCare</a>
           <a href="contato.html" class="nav-link w-nav-link">Contato</a>
           <link rel="prefetch" href="/contato">
         </nav>
@@ -71,17 +186,34 @@ body{
         <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edb5-3ba9edb4">
           <div class="health-title">Psiquiatria</div>
           <div class="paragraph">Especialidade dedicada à saúde mental.</div>
-          <div data-hover="false" data-delay="0" data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edba" class="accordion-item w-dropdown">
-            <div class="accoridon-toggle w-dropdown-toggle">
-              <div class="accordion-icon w-icon-dropdown-toggle"></div>
-              <div>
-                <div class="text-block-88">Dra. Vívian Beatriz Orlandin Coelho</div>
-              </div>
-              <div>
-                <div class="text-block-96">CRM: 107757 RQE: 31140<br></div>
+          <div class="professional-card">
+            <div class="professional-header">
+              <div class="text-block-88">Dr. Vitor Martins Gonçalves</div>
+              <div class="text-block-96">CRM: 199266 RQE: 99506</div>
+            </div>
+            <div class="professional-content">
+              <div class="w-row">
+                <div class="column-15 w-col w-col-3"><img src="images/Dr-Vitor-Martins-Goncalves.png" loading="lazy" alt="" class="image-2 card-image"></div>
+                <div class="column-19 w-col w-col-9">
+                  <div class="cv-text w-richtext">
+                    <ul role="list">
+                      <li>Graduado em Medicina pela Universidade de Araraquara em 2018</li>
+                      <li>Residência médica em Psiquiatria pelo SSCF - Campinas em 2022</li>
+                      <li>Atuação em saúde mental completa e integral</li>
+                      <li>Focos em tratamento atualizado de ansiedade, depressão, pânico, TDAH, TOC e dependências/compulsões</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-            <nav class="dropdown-list w-dropdown-list">
+          </div>
+
+          <div class="professional-card">
+            <div class="professional-header">
+              <div class="text-block-88">Dra. Vívian Beatriz Orlandin Coelho</div>
+              <div class="text-block-96">CRM: 107757 RQE: 31140</div>
+            </div>
+            <div class="professional-content">
               <div class="w-row">
                 <div class="column-15 w-col w-col-3"><img src="images/Dra-Vivian.png" loading="lazy" alt="" class="image-2 card-image"></div>
                 <div class="column-19 w-col w-col-9">
@@ -94,34 +226,7 @@ body{
                   </div>
                 </div>
               </div>
-            </nav>
-          </div>
-
-          <div data-hover="false" data-delay="0" data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edba" class="accordion-item w-dropdown">
-            <div class="accoridon-toggle w-dropdown-toggle">
-              <div class="accordion-icon w-icon-dropdown-toggle"></div>
-              <div>
-                <div class="text-block-88">Dr. Vitor Martins Gonçalves</div>
-              </div>
-              <div>
-                <div class="text-block-96">CRM: 199266 RQE: 99506<br></div>
-              </div>
             </div>
-            <nav class="dropdown-list w-dropdown-list">
-              <div class="w-row">
-                <div class="column-15 w-col w-col-3"><img src="images/ Dr-Vitor-Martins-Goncalves.png" loading="lazy" alt="" class="image-2 card-image"></div>
-                <div class="column-19 w-col w-col-9">
-                  <div class="cv-text w-richtext">
-                    <ul role="list">
-                      <li>Graduado em Medicina pela Universidade de Araraquara em 2018</li>
-                      <li>Residência médica em Psiquiatria pelo SSCF - Campinas em 2022</li>
-                      <li>Atuação em saúde mental completa e integral</li>
-                      <li>Focos em tratamento atualizado de ansiedade, depressão, pânico, TDAH, TOC e dependências/compulsões</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </nav>
           </div>
 
         </div>
@@ -132,17 +237,12 @@ body{
         <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edb5-3ba9edb4">
           <div class="health-title">Otorrinolaringologia</div>
           <div class="paragraph">Ramo da medicina que atua na região da cabeça e do pescoço, em especial nas áreas do nariz, seios da face, garganta e ouvidos.</div>
-          <div data-hover="false" data-delay="0" data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edba" class="accordion-item w-dropdown">
-            <div class="accoridon-toggle w-dropdown-toggle">
-              <div class="accordion-icon w-icon-dropdown-toggle"></div>
-              <div>
-                <div class="text-block-88">Dr Diego Oliveira Santos</div>
-              </div>
-              <div>
-                <div class="text-block-96">CRM: 174624 RQE: 92025<br></div>
-              </div>
+          <div class="professional-card">
+            <div class="professional-header">
+              <div class="text-block-88">Dr Diego Oliveira Santos</div>
+              <div class="text-block-96">CRM: 174624 RQE: 92025</div>
             </div>
-            <nav class="dropdown-list w-dropdown-list">
+            <div class="professional-content">
               <div class="w-row">
                 <div class="column-15 w-col w-col-3"><img src="images/Dr-Diego-Oliveira.png" loading="lazy" alt="" class="image-2 card-image"></div>
                 <div class="column-19 w-col w-col-9">
@@ -155,86 +255,13 @@ body{
                   </div>
                 </div>
               </div>
-            </nav>
-          </div>
-        </div>
-      </div>
-
-      <div data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edb4" class="w-layout-grid grid-8 shadow">
-        <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edcc-3ba9edb4" class="div-block-7"><img src="images/cardiology.png"  width="70" height="70" loading="lazy" alt="" class="image-3"></div>
-        <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edb5-3ba9edb4">
-          <div class="health-title">Cardiologia</div>
-          <div class="paragraph">A cardiologia é a especialidade médica que estuda o coração e os vasos sanguíneos, bem como as doenças que afetam esses órgãos.</div>
-          <div data-hover="false" data-delay="0" data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edba" class="accordion-item w-dropdown">
-            <div class="accoridon-toggle w-dropdown-toggle">
-              <div class="accordion-icon w-icon-dropdown-toggle"></div>
-              <div>
-                <div class="text-block-88">Dra. Anaci Wood Noronha</div>
-              </div>
-              <div>
-                <div class="text-block-96">CRM MG: 55426<br></div>
-              </div>
             </div>
-            <nav class="dropdown-list w-dropdown-list">
-              <div class="w-row">
-                <div class="column-15 w-col w-col-3"><img src="images/Dra-Anaci-Wood-Noronha.png" loading="lazy" alt="" class="image-2 card-image"></div>
-                <div class="column-19 w-col w-col-9">
-                  <div class="cv-text w-richtext">
-                    <ul role="list">
-                      <li>Graduação em Medicina pela Faculdade de Medicina de Itajubá, 2011</li>
-                      <li>Residência em Clínica Médica pelo Hospital de Clínicas de Itajubá, 2014</li>
-                      <li>Residência em Cardiologia pelo Hospital de Clínicas de Itajubá, 2016</li>
-                      <li>Especialização em Estimulação Cardíaca Artificial e Eletrofisiologia pela Hospital das Clínicas da Unicamp, 2018</li>
-                      <li>Título em Cardiologia pela Sociedade Brasileira de Cardiologia, 2019</li>
-                      <li>Atualmente compõe o corpo clínico do Hospital dos Fornecedores de Cana como médica hospitalista e do Hospital Regional de Piracicaba como Cardiologista</li>
-                      <li>Tem experiência na área de Medicina atuando nas seguintes especialidades Clínica Médica, Cardiologia e Marcapasso</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </nav>
           </div>
         </div>
       </div>
 
       <div data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edb4" class="w-layout-grid grid-8 shadow">
-        <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edcc-3ba9edb4" class="div-block-7"><img src="images/endocrinology.png" width="70" height="70" loading="lazy" alt="" class="image-3"></div>
-        <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edb5-3ba9edb4">
-          <div class="health-title">Endocrinologia</div>
-          <div class="paragraph">A Endocrinologia é a especialidade médica que se dedica ao diagnóstico e tratamento de distúrbios do sistema endócrino, que incluem doenças como diabetes, obesidade e patologias da tireoide.</div>
-          <div data-hover="false" data-delay="0" data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edba" class="accordion-item w-dropdown">
-            <div class="accoridon-toggle w-dropdown-toggle">
-              <div class="accordion-icon w-icon-dropdown-toggle"></div>
-              <div>
-                <div class="text-block-88">Dra. Fabiane Masiviero</div>
-              </div>
-              <div>
-                <div class="text-block-96"><br></div>
-              </div>
-            </div>
-            <nav class="dropdown-list w-dropdown-list">
-              <div class="w-row">
-                <div class="column-15 w-col w-col-3"><img src="images/webclip.png" loading="lazy" alt="" class="image-2 card-image"></div>
-                <div class="column-19 w-col w-col-9">
-                  <div class="cv-text w-richtext">
-                    <ul role="list">
-                      <li>Graduada em Medicina pela Faculdade de Medicina de Itajuba, 2007 a 2012</li>
-                      <li>Residência Médica em Clínica Médica pelo Hospital das Clínicas de Itajubá, 2013 a 2015</li>
-                      <li>Especialização em Endocrinologia e Metabologia pelo Hospital Estadual do Ipiranga de São Paulo, 2016 a 2018</li>
-                      <li>Atua em Endocrinologia e Metabologia, com foco em tratamento de obesidade, diabetes e patologias da tireoide.</li>
-                      <li>Coordenadora médica da linha Clínica / Hospitalista e Cuidados Paliativos no Hospital dos Fornecedores de Cana e no Regional Dra. Zilda Arns.</li>
-                      <li>Preceptora de Clínica Médica da Secretaria de Saúde de Piracicaba.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </div>
-
-      <div data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edb4" class="w-layout-grid grid-8 shadow">
-        <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edcc-3ba9edb4" class="div-block-7">
+        <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edcc-3ba9edb4">
           <img src="images/pediatric-neurology.png" width="65" height="65" loading="lazy" alt="" class="image-3">
         </div>
         <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edb5-3ba9edb4">
@@ -242,17 +269,12 @@ body{
           <div class="paragraph">
             Subespecialidade da pediatria que se dedica ao estudo, diagnóstico e tratamento de doenças e distúrbios do sistema nervoso de crianças e adolescentes.
           </div>
-          <div data-hover="false" data-delay="0" data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edba" class="accordion-item w-dropdown">
-            <div class="accoridon-toggle w-dropdown-toggle">
-              <div class="accordion-icon w-icon-dropdown-toggle"></div>
-              <div>
-                <div class="text-block-88">Dra. Cristiane Duarte Santos</div>
-              </div>
-              <div>
-                <div class="text-block-96">CRM 42.758</div>
-              </div>
+          <div class="professional-card">
+            <div class="professional-header">
+              <div class="text-block-88">Dra. Cristiane Duarte Santos</div>
+              <div class="text-block-96">CRM 42.758</div>
             </div>
-            <nav class="dropdown-list w-dropdown-list">
+            <div class="professional-content">
               <div class="w-row">
                 <div class="column-15 w-col w-col-3">
                   <img src="images/Dra-Cristiane-Duarte-Santos.png" loading="lazy" alt="" class="image-2 card-image">
@@ -268,87 +290,11 @@ body{
                   </div>
                 </div>
               </div>
-            </nav>
+            </div>
           </div>
         </div>
       </div>
 
-      <div data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edb4" class="w-layout-grid grid-8 shadow">
-        <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edcc-3ba9edb4" class="div-block-7"><img src="images/vascular.png" width="70" height="70" loading="lazy" alt="" class="image-3"></div>
-        <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edb5-3ba9edb4">
-          <div class="health-title">Cirurgia Vascular</div>
-          <div class="paragraph">Especialidade voltada ao cuidado do sistema circulatório, realizando tratamentos das artérias, veias e vasos linfáticos.</div>
-          <div data-hover="false" data-delay="0" data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edba" class="accordion-item w-dropdown">
-            <div class="accoridon-toggle w-dropdown-toggle">
-              <div class="accordion-icon w-icon-dropdown-toggle"></div>
-              <div>
-                <div class="text-block-88">Dra. Flávia Coura da Silva</div>
-              </div>
-              <div>
-                <div class="text-block-96">CRM 187667 / RQE 91461</div>
-              </div>
-            </div>
-            <nav class="dropdown-list w-dropdown-list">
-              <div class="w-row">
-                <div class="column-15 w-col w-col-3"><img src="images/webclip.png" loading="lazy" alt="" class="image-2 card-image"></div>
-                <div class="column-19 w-col w-col-9">
-                  <div class="cv-text w-richtext">
-                    <ul role="list">
-                      <li>Graduação: 2011 a 2016 - Faculdade de Medicina de Itajubá - FMIt</li>
-                      <li>Residência: 2017 a 2019 - Cirurgia geral. Faculdade de Medicina de Jundiaí - FMJ</li>
-                      <li>Residência: 2019 a 2021 - Cirurgia vascular. Hospital Ipiranga</li>
-                      <li>Título de especialista em cirurgia vascular pela SBACV em 2021</li>
-                      <li>Estágio: 2021 a 2022 - Cirurgia endovascular. Hospital Ipiranga</li>
-                      <li>Ecografia Vascular: 2022 a 2023 - Centro de estudos em ecografia vascular - CEUS</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </div>
-
-      <div data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edb4" class="w-layout-grid grid-8 shadow">
-        <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edcc-3ba9edb4" class="div-block-7">
-          <img src="images/drops.png" width="70" height="70" loading="lazy" alt="" class="image-3">
-        </div>
-        <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edb5-3ba9edb4">
-          <div class="health-title">Hematologia</div>
-          <div class="paragraph">
-            Especialidade que se dedica ao estudo da fisiologia e patologia do sangue, da medula e dos gânglios linfáticos.
-          </div>
-          <div data-hover="false" data-delay="0" data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edba" class="accordion-item w-dropdown">
-            <div class="accoridon-toggle w-dropdown-toggle">
-              <div class="accordion-icon w-icon-dropdown-toggle"></div>
-              <div>
-                <div class="text-block-88">Dra. Ana Maria Gnaccarini Ribeiro Lobo</div>
-              </div>
-              <div>
-                <div class="text-block-96">CRM 84015</div>
-              </div>
-            </div>
-            <nav class="dropdown-list w-dropdown-list">
-              <div class="w-row">
-                <div class="column-15 w-col w-col-3">
-                  <img src="images/Dra-Ana-Maria-Lobo.png" loading="lazy" alt="" class="image-2 card-image">
-                </div>
-                <div class="column-19 w-col w-col-9">
-                  <div class="cv-text w-richtext">
-                    <ul role="list">
-                      <li>Graduação: 1990 a 1995 - Universidade Estadual de Campinas - UNICAMP</li>
-                      <li>Residência: 1996 a 1998 - Hematologia e Hemoterapia. Universidade Estadual de Campinas - UNICAMP</li>
-                      <li>Título de especialização AMB em hematologia e hemoterapia em 2006</li>
-                      <li>Pós-graduação em Cuidados Paliativos pela Casa do Cuidar de São Paulo</li>
-                      <li>Curso Avançado de Cuidados Paliativos pela Elisabeth Kubler-Ross Foundation (EKR Brasil)</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </div>
 
       <div data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edb4" class="w-layout-grid grid-8 shadow">
         <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edcc-3ba9fab1" class="div-block-7">
@@ -359,17 +305,12 @@ body{
           <div class="paragraph">
             Atendimento nas áreas de Cirurgia Geral, Proctologia e Gastroenterologia, incluindo avaliações cirúrgicas, pré e pós-operatórias.
           </div>
-          <div data-hover="false" data-delay="0" data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edba" class="accordion-item w-dropdown">
-            <div class="accoridon-toggle w-dropdown-toggle">
-              <div class="accordion-icon w-icon-dropdown-toggle"></div>
-              <div>
-                <div class="text-block-88">Dr. Fabiano Rodilei Vendrasco</div>
-              </div>
-              <div>
-                <div class="text-block-96"></div>
-              </div>
+          <div class="professional-card">
+            <div class="professional-header">
+              <div class="text-block-88">Dr. Fabiano Rodilei Vendrasco</div>
+              <div class="text-block-96"></div>
             </div>
-            <nav class="dropdown-list w-dropdown-list">
+            <div class="professional-content">
               <div class="w-row">
                 <div class="column-15 w-col w-col-3">
                   <img src="images/profissionais/Dr-Fabiano.png" loading="lazy" alt="Foto do Dr. Fabiano Rodilei Vendrasco" class="image-2 card-image">
@@ -387,113 +328,7 @@ body{
                   </div>
                 </div>
               </div>
-            </nav>
-          </div>
-        </div>
-      </div>
-
-
-      <div data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edb4" class="w-layout-grid grid-8 shadow">
-        <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edcc-3ba9edb4" class="div-block-7">
-          <img src="images/fruits.png" width="70" height="70" loading="lazy" alt="" class="image-3">
-        </div>
-        <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edb5-3ba9edb4">
-          <div class="health-title">Nutrição</div>
-          <div class="paragraph">A nutrição é a ciência que estuda os alimentos e os processos fisiológicos e bioquímicos relacionados à ingestão e ao aproveitamento dos nutrientes pelos organismos vivos.</div>
-
-          <div data-hover="false" data-delay="0" data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edba" class="accordion-item w-dropdown">
-            <div class="accoridon-toggle w-dropdown-toggle">
-              <div class="accordion-icon w-icon-dropdown-toggle"></div>
-              <div>
-                <div class="text-block-88">Dra. Beatriz Visentin de Almeida</div>
-              </div>
-              <div>
-                <div class="text-block-96"></div>
-              </div>
             </div>
-            <nav class="dropdown-list w-dropdown-list">
-              <div class="w-row">
-                <div class="column-15 w-col w-col-3">
-                  <img src="images/Dra-Beatriz-Visentin-de-Almeida.png" loading="lazy" alt="" class="image-2 card-image">
-                </div>
-                <div class="column-19 w-col w-col-9">
-                  <div class="cv-text w-richtext">
-                    <ul role="list">
-                      <li>Graduada em Nutrição pela Universidade Cruzeiro do Sul, Itu - São Paulo, 2017 a 2020</li>
-                      <li>Pós-graduada em Nutrição nas Doenças Crônicas Não Transmissíveis pelo Instituto Israelita de Ensino e Pesquisa Albert Einstein, São Paulo, 2021 a 2022</li>
-                      <li>Curso de aprimoramento em Interpretação de Exames Bioquímicos e Suplementação na Prática Clínica pelo Centro de Nutrição Funcional, São Paulo, 2020</li>
-                      <li>Curso de aprimoramento em Tratamento Nutricional na Oncologia e Nutrição Hospitalar pelo Instituto Israelita de Ensino e Pesquisa Albert Einstein, São Paulo, 2021</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </nav>
-          </div>
-
-          <div data-hover="false" data-delay="0" data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edba" class="accordion-item w-dropdown">
-            <div class="accoridon-toggle w-dropdown-toggle">
-              <div class="accordion-icon w-icon-dropdown-toggle"></div>
-              <div>
-                <div class="text-block-88">Dra. Débora Everaldo</div>
-              </div>
-              <div>
-                <div class="text-block-96">CRN 27508</div>
-              </div>
-            </div>
-            <nav class="dropdown-list w-dropdown-list">
-              <div class="w-row">
-                <div class="column-15 w-col w-col-3">
-                  <img src="images/profissionais/Dra-Debora.png" loading="lazy" alt="Foto da Dra. Débora Everaldo" class="image-2 card-image">
-                </div>
-                <div class="column-19 w-col w-col-9">
-                  <div class="cv-text w-richtext">
-                    <ul role="list">
-                      <li>Graduada em Nutrição pela Universidade Federal do Mato Grosso (UFMT), 2009</li>
-                      <li>Pós-graduada pelo Ganep - SP</li>
-                      <li>Capacitada na Divisão de Nutrição e Dietética – Instituto Central no Hospital das Clínicas - FMUSP</li>
-                      <li>Especialista em Emagrecimento</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </nav>
-          </div>
-
-        </div>
-      </div>
-
-
-      <div data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edb4" class="w-layout-grid grid-8 shadow">
-        <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edcc-3ba9edb4" class="div-block-7"><img src="images/osteopathy.png" width="70" height="70" loading="lazy" alt="" class="image-3"></div>
-        <div id="w-node-_2d3bbaab-65af-f48c-2773-1d7f3ba9edb5-3ba9edb4">
-          <div class="health-title">Osteopatia</div>
-          <div class="paragraph">A Osteopatia é uma abordagem de tratamento focada na relação entre a estrutura corporal e seu funcionamento, priorizando a integridade do sistema musculoesquelético.</div>
-          <div data-hover="false" data-delay="0" data-w-id="2d3bbaab-65af-f48c-2773-1d7f3ba9edba" class="accordion-item w-dropdown">
-            <div class="accoridon-toggle w-dropdown-toggle">
-              <div class="accordion-icon w-icon-dropdown-toggle"></div>
-              <div>
-                <div class="text-block-88">Dr. André Quast</div>
-              </div>
-              <div>
-                <div class="text-block-96">Crefito: 14173-F<br></div>
-              </div>
-            </div>
-            <nav class="dropdown-list w-dropdown-list">
-              <div class="w-row">
-                <div class="column-15 w-col w-col-3"><img src="images/Dr-Andre-Quast.png" loading="lazy" alt="" class="image-2 card-image"></div>
-                <div class="column-19 w-col w-col-9">
-                  <div class="cv-text w-richtext">
-                    <ul role="list">
-                      <li>Fiseoterapeuta formado plea UNIFAFIBE</li>
-                      <li>especialização em Ortopedia e Traumatologia - UNICAMP</li>
-                      <li>Formação Completa em Osteopatia - CBO</li>
-                      <li>Título de Especialista em Osteopatia - COFITTO/AOB</li>
-                      <li>Docente dos cursos de Pós graduação em Osteopatia e Fisioterapia Traumato-ortopédica - UNIMETROCAMP</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </nav>
           </div>
         </div>
       </div>
@@ -511,6 +346,7 @@ body{
       </div>
     </div>
   </div>
+
   <div class="footer">
     <div class="container w-container">
       <div class="div-block-47">
