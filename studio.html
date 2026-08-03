@@ -192,7 +192,7 @@ body{
       </p>
 
       <!-- Professionals Grid -->
-      <div class="professionals-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); grid-column-gap: 30px; grid-row-gap: 40px; margin-top: 40px; width: min(1240px, calc(100vw - 40px)); margin-left: 50%; transform: translateX(-50%); justify-content: center;">
+      <div class="professionals-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); grid-column-gap: 30px; grid-row-gap: 40px; margin-top: 40px; margin-left: auto; margin-right: auto; max-width: 100%; justify-content: center;">
          <!-- Professional: Beatriz Mello  -->
         <div class="professional-card" style="background-color: white; border-radius: 20px; padding: 30px; text-align: center; box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); overflow: hidden; min-height: 500px; display: flex; flex-direction: column;">
           <img src="images/profissionais/Dra-Beatriz-Mello.png" loading="lazy" alt="Simone Kirschke" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px; display: block; box-shadow: 0 4px 15px rgba(123, 75, 148, 0.3);">
@@ -269,9 +269,25 @@ body{
 
       <!-- Responsive Styles -->
       <style>
+        /* Somente no desktop a grade sai da largura do container, para caber
+           os 4 cards. Abaixo de 1200px ela volta a ser um bloco normal,
+           centralizado por margin auto - sem transform, que em telas menores
+           era anulado pelo margin-left: auto de css/studio.css e jogava a
+           grade para fora da tela. */
+        @media (min-width: 1200px) {
+          .professionals-grid {
+            width: min(1240px, calc(100vw - 40px));
+            max-width: none !important;
+            margin-left: 50% !important;
+            margin-right: 0 !important;
+            transform: translateX(-50%);
+          }
+        }
+
         @media (max-width: 1199px) {
           .professionals-grid {
             grid-template-columns: repeat(3, 1fr) !important;
+            transform: none !important;
           }
         }
 
@@ -279,7 +295,7 @@ body{
           .professionals-grid {
             grid-template-columns: repeat(2, 1fr) !important;
             grid-column-gap: 30px !important;
-            width: min(700px, calc(100vw - 40px)) !important;
+            max-width: 700px !important;
           }
         }
 
@@ -287,7 +303,7 @@ body{
           .professionals-grid {
             grid-template-columns: 1fr !important;
             grid-column-gap: 0 !important;
-            width: min(400px, calc(100vw - 32px)) !important;
+            max-width: 400px !important;
           }
 
           .professional-card {
