@@ -192,7 +192,7 @@ body{
       </p>
 
       <!-- Professionals Grid -->
-      <div class="professionals-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); grid-column-gap: 40px; grid-row-gap: 40px; margin-top: 40px; max-width: 1000px; margin-left: auto; margin-right: auto; justify-content: center;">
+      <div class="professionals-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); grid-column-gap: 30px; grid-row-gap: 40px; margin-top: 40px; width: min(1240px, calc(100vw - 40px)); margin-left: 50%; transform: translateX(-50%); justify-content: center;">
          <!-- Professional: Beatriz Mello  -->
         <div class="professional-card" style="background-color: white; border-radius: 20px; padding: 30px; text-align: center; box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); overflow: hidden; min-height: 500px; display: flex; flex-direction: column;">
           <img src="images/profissionais/Dra-Beatriz-Mello.png" loading="lazy" alt="Simone Kirschke" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px; display: block; box-shadow: 0 4px 15px rgba(123, 75, 148, 0.3);">
@@ -268,13 +268,17 @@ body{
 
       <!-- Responsive Styles -->
       <style>
+        @media (max-width: 1199px) {
+          .professionals-grid {
+            grid-template-columns: repeat(3, 1fr) !important;
+          }
+        }
+
         @media (max-width: 991px) {
           .professionals-grid {
             grid-template-columns: repeat(2, 1fr) !important;
             grid-column-gap: 30px !important;
-            max-width: 700px !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
+            width: min(700px, calc(100vw - 40px)) !important;
           }
         }
 
@@ -282,9 +286,7 @@ body{
           .professionals-grid {
             grid-template-columns: 1fr !important;
             grid-column-gap: 0 !important;
-            max-width: 400px !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
+            width: min(400px, calc(100vw - 32px)) !important;
           }
 
           .professional-card {
